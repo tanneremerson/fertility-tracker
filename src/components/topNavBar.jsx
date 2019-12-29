@@ -3,7 +3,17 @@ import React, { Component } from "react";
 class TopNavBar extends Component {
   state = {};
   render() {
-    return <h1 class="text-primary text-center">Fertility Awareness Method</h1>;
+    return (
+      <nav className="navbar navbar-dark bg-dark text-light">
+        <h3>Fertility Awareness Method</h3>
+        <button class="btn btn-outline-success" type="button">
+          Previous Cycle
+        </button>
+        <button class="btn btn-outline-success" type="button">
+          Next Cycle
+        </button>
+      </nav>
+    );
   }
 }
 
