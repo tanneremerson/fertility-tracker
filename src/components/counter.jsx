@@ -7,8 +7,10 @@ class Counter extends Component {
 
   render() {
     return (
-      <div class="text-center">
-        <h3 class="text-center text-primary">Day {this.props.counter.id}</h3>
+      <div className="text-center">
+        <h5 className="text-center text-primary">
+          Day {this.props.counter.id}
+        </h5>
         <span className={this.getBadgeClasses()}>{this.formatCount()}</span>
         <button
           onClick={this.handleIncrement}
