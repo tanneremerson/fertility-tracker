@@ -3,15 +3,26 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
-import TopNavBar from "./components/topNavBar";
-import Counters from "./components/counters";
-import Graph from "./components/graph";
+import App from "./App";
+import { Provider } from "react-redux";
+import store from "./store";
 
-ReactDOM.render(<TopNavBar />, document.getElementById("topNavBar"));
-// ReactDOM.render(<TodaysUpdates />, document.getElementById("todaysUpdates"));
-// ReactDOM.render(<Counters />, document.getElementById("root"));
-ReactDOM.render(<Counters />, document.getElementById("root"));
-ReactDOM.render(<Graph />, document.getElementById("graph"));
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>,
+  document.getElementById("root")
+);
+
+// ReactDOM.render(<TopNavBar />, document.getElementById("topNavBar"));
+// ReactDOM.render(
+//   <Graph data={data} state={state} />,
+//   document.getElementById("graph")
+// );
+// ReactDOM.render(
+//   <Data data={data} state={state} />,
+//   document.getElementById("data")
+// );
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
